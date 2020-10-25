@@ -1,0 +1,18 @@
+python
+TypeError: Cannot create a consistent method resolution order (MRO) [duplicate]
+
+
+class Player:
+    pass
+
+class Enemy(Player):
+    pass
+
+class GameObject(Player, Enemy):
+    pass
+
+g = GameObject()
+
+
+# resolved without "player"
+# class GameObjeect(Enemy)
